@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dante - File</title>
+
+
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<style>
+
+    
+    body {
+        background: #0f172a;
+        color: #15fafa;
+        font-family: 'Roboto Mono', monospace;
+        margin: 0;
+    }
+
+    .sidebar {
+        width: 260px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #1e293b;
+        border-right: 2px solid #15fafa;
+        padding: 20px;
+        overflow-y: auto;
+        background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    }
+
+    .sidebar h3 {
+        color: #15fafa;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .accordion-button {
+        background: #1e293b;
+        color: #15fafa;
+        font-weight: 700;
+        border-radius: 6px;
+        margin-bottom: 6px;
+        transition: 0.2s;
+    }
+
+    .accordion-button:hover, .accordion-button:focus {
+        background: #334155;
+        color: #5cfff1;
+        text-shadow: 0 0 6px #ffffff, 0 0 10px #15fafa;
+    }
+
+    .accordion-body a {
+        display: block;
+        padding: 8px 15px;
+        text-decoration: none;
+        color: #15fafa;
+        border-radius: 6px;
+        transition: 0.2s;
+        margin-bottom: 4px;
+        
+    }
+
+    .accordion-body a:hover {
+        background: #334155;
+        color: #ffffff;
+        
+    }
+
+    .main-content {
+        margin-left: 260px;
+        padding: 30px;
+    }
+
+    .main-content h1 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        color: #facc15;
+        margin-bottom: 10px;
+    }
+
+    .main-content p {
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+        color: #15fafa;
+    }
+
+
+    .card-box {
+        background: #1e293b;
+        border: 1px solid #15fafa;
+        border-radius: 10px;
+        padding: 20px;
+        color: #15fafa;
+        box-shadow: 0 0 8px rgba(250,204,21,0.2);
+        transition: 0.3s;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        margin-bottom: 20px;
+        
+    }
+
+    .card-box:hover {
+        box-shadow: 0 0 12px rgba(250,204,21,0.5);
+        transform: translateY(-3px);
+    }
+
+    .card-box h3 {
+        color: #facc15;
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        margin-bottom: 10px;
+    }
+
+    
+
+    @media (max-width: 768px) {
+        .sidebar {
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-right: none;
+            padding: 10px;
+        }
+
+        .main-content {
+            margin-left: 0;
+            padding: 20px;
+        }
+
+
+       
+    }
+
+    .character-box {
+    width: 300px;
+    height: 700px;
+    border: 2px solid #15fafa;
+    border-radius: 12px;
+    background-color: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(21,250,250,0.4);
+    overflow: hidden;
+    float: left;
+}
+
+.character-box img {
+    max-width:100%;
+    max-height: 100%;
+}
+
+
+.InfoName {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 0%;
+    border: 2px solid #15fafa;
+    border-radius: 12px;
+    background-color: #1e293b;
+    margin-top: 10%;
+}
+
+.paragraph {
+    margin-left: 5%;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="sidebar">
+    <h3>Fandom</h3>
+
+    <div class="accordion" id="sidebarAccordion">
+      
+        <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header" id="headingHome">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHome" aria-expanded="true">
+                    Home
+                </button>
+            </h2>
+            <div id="collapseHome" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0">
+                    <a href="../index.html">Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+  
+            <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header" id="headingSeries">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeries" aria-expanded="false">
+                    Comics
+                </button>
+            </h2>
+            <div id="collapseSeries" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0 ms-3">
+                    <a href="../Comics/COMICWeb.html">Devil May Cry Comic Series 1-5</a>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header" id="headingCharacters">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCharacters" aria-expanded="false">
+                    Characters
+                </button>
+            </h2>
+            <div id="collapseCharacters" class="accordion-collapse collapse show" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0 ms-3">
+                   <a href="../Characters/Nero.html">Nero</a>
+                    <a href="../Characters/Nico.html">Nico</a>
+                    <a href="../Characters/Kyrie.html">Kyrie</a>
+                    <a href="#">Dante</a>
+                    <a href="../Characters/V.html">V</a>
+                    <a href="../Characters/Vergil.html">Vergil</a>
+                </div>
+            </div>
+        </div>
+
+ 
+     <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header" id="headingFanArt">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFanArt" aria-expanded="false">
+                    Fan Art
+                </button>
+            </h2>
+            <div id="collapseFanArt" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0 ms-3">
+                    <a href="../Fan Art/FanArt.html">Gallery</a>
+                </div>
+            </div>
+        </div>
+
+
+     
+        <div class="accordion-item bg-transparent border-0">
+            <h2 class="accordion-header" id="headingNews">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNews" aria-expanded="false">
+                    News & Blog
+                </button>
+            </h2>
+            <div id="collapseNews" class="accordion-collapse collapse" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body p-0 ms-3">
+                    <a href="#">Latest News</a>
+                    <a href="#">Announcements</a>
+                    <a href="#">Dev Logs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-content">
+   <div class="row">
+         <div class="col-12 col-md-1 mx-auto">
+             <div class="character-box">
+                  <img src="../Characters/DanteDMC5.png" alt="Character">
+             </div>
+               
+         </div>
+          <div class="col-12 col-md-7 mx-auto">
+                  <div class="InfoName">
+                    <p>NAME: Dante</p>
+                    <p>AGE: 43</p>
+                    <P>Character Report - Nico:</P>
+                    <p class="paragraph"> Everybody seems to start any talk about Dante with "the son of the legendary dark knight Sparda." If you ask me, Dante himself is pretty legendary too.
+                        So he gets a job from this "V" fella who shows up outta nowhere, and he goes down to the underworld to steal back Yamato from the demon king—the guy who stole it from Nero.
+                        Surprise twist—even Dante can't stand up to the guy. I mean, he gets wrecked. Just goes to show, there ain't no such thing as the perfect man.</p>
+                 </div>
+          </div>
+   </div>
+</div>
+
+
+<script src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+.container{
+    background-image: url('kit.png');
+}
+
+  body {
+    background-color: #1a1f1f;
+    font-family: "Inter", sans-serif;
+    color: #eee;
+  }
+
+  h1, h2, h3, .navbar-brand {
+    font-family: "Cinzel", serif;
+  }
+
+  .hero {
+    background-image: url('kit.png');
+    background-size: cover;
+    background-position: center;
+    padding: 130px 0;
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .feature-box {
+    background-color: #223030;
+    border-radius: 20px;
+    padding: 25px;
+    border: 2px solid #d4a84c;
+    transition: transform .2s ease;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-5px);
+  }
+
+  footer {
+    border-top: 1px solid #444;
+  }
